@@ -1,0 +1,12 @@
+---
+description: Use main as the default git branch name for new repositories
+alwaysApply: true
+---
+
+# Git default branch
+
+When initializing git repositories or creating GitHub repos for this project, always use `main` as the default branch name, never `master`.
+
+- Run `git init -b main` (or set `init.defaultBranch` before init) so the first branch is `main`
+- When creating GitHub repos with `gh repo create`, ensure the default branch is `main`
+- If a repo was created with `master`, rename locally with `git branch -m master main`, push `main`, set it as the default on GitHub, then delete `master` on the remote
